@@ -1,7 +1,12 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/roit-hackernews',
+    connection: {
+      database: 'roit-hackernews',
+      user: 'lf',
+      password:'lf',
+      host:'localhost'
+    },
     migrations: {
       directory: __dirname + '/db/migrations'
     },
