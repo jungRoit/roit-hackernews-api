@@ -12,11 +12,11 @@ const getUserByUsername = (username => {
   return Knex('users').where({username:username});
 })
 
-const validateLogin = (user) =>{
+const getUserByUsernameAndPassword = (user) =>{
   return Knex('users').where({
     username:user.username,
     password: user.password
   });
 }
 
-export {getAllUsers, getUserById, getUserByUsername, validateLogin};
+export {getAllUsers, getUserById, getUserByUsername, getUserByUsernameAndPassword};
